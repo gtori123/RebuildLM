@@ -1,0 +1,141 @@
+{
+  "scope": "Random frozen decoder and synthetic tokens. No natural-language quality or speed measured.",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "weights_seed": 37,
+  "data_seed": 12302,
+  "dimensions": {
+    "width": 24,
+    "router_width": 16,
+    "layers": 2,
+    "top_k": 2,
+    "segment": 4
+  },
+  "base_pages": 48,
+  "independent_revisions": 48,
+  "fixed_prompts": 24,
+  "tokens_per_answer": 16,
+  "incremental_vs_full_mismatches": 0,
+  "total": {
+    "answers": 1152,
+    "checked_logits_vectors": 18432,
+    "retained_prefix_tokens": 14932,
+    "reused_entire_answer": 845,
+    "reused_partial_answer": 220,
+    "old_ids_only_reused": 959,
+    "old_ids_only_wrong_logits": 114,
+    "old_ids_only_wrong_tokens": 87,
+    "total_tokens": 18432
+  },
+  "per_operation": {
+    "replace": {
+      "answers": 384,
+      "checked_logits_vectors": 6144,
+      "retained_prefix_tokens": 4680,
+      "reused_entire_answer": 259,
+      "reused_partial_answer": 85,
+      "old_ids_only_reused": 329,
+      "old_ids_only_wrong_logits": 70,
+      "old_ids_only_wrong_tokens": 55,
+      "total_tokens": 6144
+    },
+    "insert": {
+      "answers": 384,
+      "checked_logits_vectors": 6144,
+      "retained_prefix_tokens": 5708,
+      "reused_entire_answer": 340,
+      "reused_partial_answer": 43,
+      "old_ids_only_reused": 384,
+      "old_ids_only_wrong_logits": 44,
+      "old_ids_only_wrong_tokens": 32,
+      "total_tokens": 6144
+    },
+    "delete": {
+      "answers": 384,
+      "checked_logits_vectors": 6144,
+      "retained_prefix_tokens": 4544,
+      "reused_entire_answer": 246,
+      "reused_partial_answer": 92,
+      "old_ids_only_reused": 246,
+      "old_ids_only_wrong_logits": 0,
+      "old_ids_only_wrong_tokens": 0,
+      "total_tokens": 6144
+    }
+  },
+  "example_missed_by_old_ids_only": {
+    "revision": 3,
+    "operation": "replace",
+    "query_index": 17,
+    "edited_page": 9,
+    "old_selected_ids": [
+      1,
+      5,
+      8,
+      22,
+      26,
+      27,
+      29,
+      32,
+      37,
+      41,
+      42,
+      44,
+      46
+    ],
+    "prompt_token_ids": [
+      25,
+      9,
+      28,
+      50,
+      54,
+      60
+    ],
+    "newly_accepted_page_tokens": [
+      56,
+      58,
+      61,
+      34,
+      2,
+      25,
+      35,
+      40
+    ],
+    "retained_prefix": 4,
+    "old_output": [
+      76,
+      76,
+      19,
+      78,
+      9,
+      5,
+      53,
+      52,
+      29,
+      12,
+      37,
+      35,
+      20,
+      47,
+      47,
+      72
+    ],
+    "full_rebuild_output": [
+      76,
+      76,
+      19,
+      78,
+      5,
+      5,
+      5,
+      11,
+      37,
+      12,
+      37,
+      35,
+      20,
+      47,
+      47,
+      72
+    ]
+  }
+}
