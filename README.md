@@ -6,7 +6,7 @@ Imagine adding a mobile-only exception to an API manual. A previous answer may n
 
 **Research prototype.** The runnable model is a two-layer NumPy Transformer with frozen random weights. The experiment tests exact reuse on synthetic token sequences. Natural-language answer quality and end-to-end speed on a trained 1.5B model are open experiments.
 
-[Design and reproduction guide (English)](DESIGN.md) · [日本語版](DESIGN.ja.md) · [Reference decoder](model.py) · [Recorded results](checked.json)
+[Design and reproduction guide](DESIGN.md) · [Reference decoder](model.py) · [Recorded results](checked.json)
 
 ## Reproduce the experiment
 

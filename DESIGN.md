@@ -1,7 +1,5 @@
 # RebuildLM design and reproduction guide
 
-[日本語版](DESIGN.ja.md)
-
 A maintainer changes one line in an API manual. Of the 1,000 answers generated from the old version, which can still be served verbatim? Even an answer that cited an unchanged page could be stale if someone added an exception on another page. RebuildLM records which pages its decoder selected and how highly a new page would have to score to enter that selection. After an edit, it can keep a verified prefix and regenerate the rest of the answer.
 
 The runnable prototype is a two-layer NumPy Transformer with frozen random weights. It tests whether incremental updates give exactly the same result as decoding from scratch. The 1.5B architecture, training procedure, and GPU evaluation described below are proposed experiments.
