@@ -6,7 +6,7 @@ Imagine adding a mobile-only exception to an API manual. A previous answer may n
 
 **Research prototype.** The runnable model is a two-layer NumPy Transformer with frozen random weights. The experiment tests exact reuse on synthetic token sequences. Natural-language answer quality and end-to-end speed on a trained 1.5B model are open experiments.
 
-[日本語の設計書・実行手順](DESIGN.ja.md) · [Reference decoder](model.py) · [Recorded results](checked.json)
+[Design and reproduction guide (English)](DESIGN.md) · [日本語版](DESIGN.ja.md) · [Reference decoder](model.py) · [Recorded results](checked.json)
 
 ## Reproduce the experiment
 
@@ -37,7 +37,7 @@ One example makes the failure concrete. Page 9 was absent from every document lo
 3. After a document edit, check reads in generation order. A read can be reused if its selected pages retain their content and every added or rewritten candidate scores strictly below the old cutoff. Ties trigger recomputation.
 4. When a check fails, resume from the start of that segment. If every check passes, return the cached answer.
 
-The equivalence claim applies to a fresh run of the **same** model, prompt, and deterministic inference settings. Factual correctness requires a separate evaluation. The larger-model design and planned comparisons against full-context decoding and an exact re-retrieval RAG baseline are in [the design document](DESIGN.ja.md).
+The equivalence claim applies to a fresh run of the **same** model, prompt, and deterministic inference settings. Factual correctness requires a separate evaluation. The larger-model design and planned comparisons against full-context decoding and an exact re-retrieval RAG baseline are in [the design document](DESIGN.md).
 
 ## License
 
